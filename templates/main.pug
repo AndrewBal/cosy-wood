@@ -201,8 +201,22 @@
             .title
                 .title_main order process
             div(class="tabs order-process__tab")
-                div(tab-button btn-switch active) standart order
-                div(tab-button btn-switch) bespoke product
-            div(tabs-content active)
-            .tabs-content
+                .tabs-caption
+                    div(class="tab-button btn-switch active" ) standart order
+                    div(class="tab-button btn-switch"  ) bespoke product
+            div(class="tabs-content active")              
+                ul.tabs-content__group
+                    - for (var x = 0; x < 5; x++)   
+                        li.tabs-item
+                            .tabs-item__icon
+                                img(src="img/process.svg", alt="Choose preferred standard item or bespoke size")
+                            .tabs-item__text Choose preferred standard item or bespoke size
+            div(class="tabs-content")               
+                ul.tabs-content__group
+                    - for (var x = 0; x < 5; x++)
+                        li.tabs-item
+                            .tabs-item__icon
+                                img(src="img/process_2.svg", alt="Choose preferred standard item or bespoke size")
+                            .tabs-item__text Choose preferred standard item or bespoke size
+
 .right-column

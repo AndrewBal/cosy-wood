@@ -256,6 +256,112 @@ a {
   padding-top: 50px;
 }
 
+
+
+
+
+
+
+
+
+.tabs-section {
+  padding-top: 100px;
+    padding-bottom: 50px;
+    background: #fff;
+}
+
+.order-process__tab {
+   padding-top: 50px;
+}
+
+
+.tabs {
+  &-caption {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    padding-bottom: 50px;
+    .btn-switch {
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #231f20;
+      cursor: pointer;
+      padding-bottom: 13px;
+      position: relative;
+      margin: 0 15px;
+       // ------------off hover-------------
+    @include offHoverOnDevices{
+
+      &:hover:not(.disable) {
+          &::after {
+              width: 100%;
+          }
+      }
+  }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: .3s;
+        width: 0%;
+        height: 3px;
+        background: #231f20;
+      }
+      &.active::after {
+        width: 100%;
+      }
+    }
+  }
+  &-content {
+    display: none;
+    &.active {
+      display: block;
+    }
+    &__group {
+      display: flex;
+      justify-content: space-between;
+      padding: 3em 8%;
+      counter-reset: list;
+      font-size: 12px;
+    }
+  }
+  &-item {
+    width: 100%;
+    @include support-font;
+    padding: 0 1%;
+    &__icon {
+      width: 5.5em;
+      height: 5.5em;
+      margin-bottom: 1.9em;
+      img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+      &__text {
+        font-size: 1em;
+      color: #52595b;
+      line-height: 130%;
+      min-height: 4em;
+      margin-bottom: 1em;
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+
+
 #footer {
   background: #cccccc;
   .footer-content {
