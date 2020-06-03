@@ -6,3 +6,5 @@
 #### gulp
 > npm install --global gulp-cli
 
+## to start a project
+> gulp

@@ -328,9 +328,16 @@ a {
       padding: 3em 8%;
       counter-reset: list;
       font-size: 12px;
+      @include fluid-type($md, $max_width, 12px, 16px);
+      li::after {
+        counter-increment: list;
+        content: "0" counter(list);
+        color: #b7c1c4;
+        font-size: .75em;
+    }
     }
   }
-  &-item {
+  &-item {  
     width: 100%;
     @include support-font;
     padding: 0 1%;
@@ -344,13 +351,14 @@ a {
         -o-object-fit: contain;
         object-fit: contain;
       }
-      &__text {
-        font-size: 1em;
+     
+    }
+    &__text {
+      font-size: 1em;
       color: #52595b;
       line-height: 130%;
       min-height: 4em;
       margin-bottom: 1em;
-      }
     }
   }
   
