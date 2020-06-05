@@ -1,4 +1,4 @@
-## Before you start you need:
+## Before start you need:
 #### node.js
 > node -v
 #### npm
