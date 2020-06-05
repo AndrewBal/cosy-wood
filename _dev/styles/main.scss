@@ -1,5 +1,6 @@
 @import "normalize.scss";
 @import "header.scss";
+@import "footer.scss";
 @import "banner.scss";
 @import "global-styles.scss";
 .container {
@@ -608,12 +609,3 @@ border: 1px solid #231f20;
 
 
 
-#footer {
-  background: #cccccc;
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-}

@@ -1,13 +1,69 @@
 footer#footer
     .container
-        .footer-content
-            .logo
-                a(href="#"): img(src="img/logo.png")
-            .nav-menu
-                ul
-                    each val, index in ['zero', 'one', 'two']
-                        li= index + ': ' + val
-            .contact
-                .email
-                    span
-                        a(href="mailto:email@gmail.com") email@gmail.com
+        .footer-top
+            .footer-top__left-column
+                .company-info
+                    .company-info__title Company info
+                    .company-info__content
+                        p Cosywood Limited
+                        p Registered in United Kingdom
+                        p Company Number: 8992446
+                        p VAT Reg. Nr. 234202552
+                    .company-info__social
+                        a
+                            i(class="fa fa-instagram" aria-hidden="true")
+                        a
+                            i(class="fa fa-facebook" aria-hidden="true")
+            .footer-top__center-column
+                .footer-menu
+                    .footer-menu__title menu
+                    .footer-menu__content
+                        ul
+                            li
+                                a Work with us
+                            li
+                                a Reviews
+                            li
+                                a About Us
+                            li
+                                a Shipping 
+                            li
+                                a Projects
+                            li
+                                a Contacts
+                            li
+                                a Blog
+                            li
+                                a Account
+                .more-information
+                    .more-information__title more information
+                    .more-information__content
+                        ul
+                            li
+                                a Privacy policy
+                            li
+                                a Terms and Conditions
+                            li
+                                a FAQ
+                            li
+                                a Warranty Information
+                            li
+                                a Sitemap
+            .footer-top__right-column
+                .contact-us
+                    .contact-us__title contact us
+                    .contact-us__content
+                        ul
+                            li
+                                a
+                                    i(class="fa fa-mobile" aria-hidden="true")
+                                    span 07948352636
+                            li
+                                a
+                                    i(class="fa fa-mobile" aria-hidden="true")
+                                    span 02071172821
+                            li
+                                a.contact-link
+                                    i(class="fa fa-envelope" aria-hidden="true")
+                                    span cw@cosywood.co.uk
+        .footer-bottom
