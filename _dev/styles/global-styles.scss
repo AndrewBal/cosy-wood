@@ -126,3 +126,17 @@ body {
 .slider .swiper-button-prev {
     transform: translateY(-50%) scaleX(-1);
 }
+
+.btn {
+    padding: 1.3em 3em;
+    transition: color .3s;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+}
