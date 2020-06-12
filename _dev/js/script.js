@@ -14,6 +14,12 @@ $(document).ready(function () {
       type: "bullets",
       clickable: true,
     },
+
+    breakpoint: {
+      768: {
+        slidesPerView: 1,
+      }
+    }
   });
 
 
@@ -52,6 +58,14 @@ $(document).ready(function () {
     $(".tabs-content").toggleClass("active");
   });
 
+
+  $("#burher-btn").click(function(){
+    $(".burger-menu").show();
+  });
+
+  $("#burger-menu-close").click(function(){
+    $(".burger-menu").hide();
+  });
 
 
 });

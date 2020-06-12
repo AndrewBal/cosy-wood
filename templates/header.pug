@@ -27,12 +27,63 @@ header#header
                         a(href="")
                             img(src="")
                     li.header-info__item
-                        a(href="")
+                        a(href="")  
                             img(src="")
             .header-mobile
                 button.burger-btn(id="burher-btn")
                     svg(class="icon icon-burger")
-                .burger-menu(id="burger-menu")
+                        use(xlink:href="img/sprite-inline.svg#burger")
+                .burger-menu(id="burger-menu" style="display: none")
+                    .burger-menu__header
+                        a.logo
+                            img(src="img/logo.png", alt="logo")
+                        .burger-menu-close(id="burger-menu-close")
+                    ul(class="burger-menu__list hide-on-mobile")
+                        li
+                            a(class="burger-menu__item") work with us
+                        li
+                            a(class="burger-menu__item") reviews
+                        li
+                            a(class="burger-menu__item") about us
+                        li
+                            a(class="burger-menu__item") shipping
+                        li
+                            a(class="burger-menu__item") projects
+                        li
+                            a(class="burger-menu__item") blog
+                    .burger-menu__contacts
+                        a
+                            i(class="fa fa-mobile" aria-hidden="true")
+                            span 07948352636
+                        a
+                            i(class="fa fa-mobile" aria-hidden="true")
+                            span 02071172821
+                        a.contact-link
+                            i(class="fa fa-envelope" aria-hidden="true")
+                            span cw@cosywood.co.uk
+                    .burger-menu__social
+                        a
+                            i(class="fa fa-instagram" aria-hidden="true")
+                        a
+                            i(class="fa fa-facebook" aria-hidden="true")
+                ul(class="header-action")
+                        li
+                            a(class="select-language header-action__item hover-dash")
+                                img(src="img/eng.png")
+                                span EN
+                        li
+                            a(class="header-action__item hover-dash")
+                                i(class="fa fa-user" aria-hidden="true")
+                                span Account
+                        li
+                            a(class="open-search-btn header-action__item hover-dash")
+                                i(class="fa fa-search" aria-hidden="true")
+                                span search
+                        li
+                            a(class="cart-btn header-action__item hover-dash")
+                                i( class="fa fa-shopping-cart" aria-hidden="true")
+                                span cart 
+                                i.cart-btn__value (0)
 
     .header__bottom
         .container   

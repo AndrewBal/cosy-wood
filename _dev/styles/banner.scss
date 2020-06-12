@@ -18,11 +18,24 @@
         min-width: 100%;
         min-height: 100%;
         z-index: -1;
-        left: 0;
+        left: 0;    
         top: 0;
         right: 0;
         bottom: 0;
     }
+
+    	// ------------media-------------
+	@include w($lg){
+		height: calc(100vh - 150px);
+	}
+	// ------------media-------------
+	@include w($md){
+		height: calc(125vh - 125px);
+	}
+	// ------------media-------------
+	@include w($sm){
+		height: calc(100vh - 60px);
+	}
 }
 .banner-screen__bottom {
     position: absolute;
@@ -30,6 +43,10 @@
     right: 0;
     left: 0;
     border-top: 1px solid #fff;
+    // ------------media-------------
+    @include w(1024px){
+		border-top: none;
+	}
 }
 .advantages {
     display: flex;
