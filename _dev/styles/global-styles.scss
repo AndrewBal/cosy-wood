@@ -156,6 +156,11 @@ body {
     z-index: 1;
 }
 
+.open {
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .gallery-card__title .title__main {
     @include w($sm) {
         margin-bottom: 45px;

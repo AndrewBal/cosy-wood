@@ -327,6 +327,12 @@ a {
       padding-bottom: 13px;
       position: relative;
       margin: 0 15px;
+
+
+
+      @include w($sm) {
+        font-size: 12px;
+      }
        // ------------off hover-------------
     @include offHoverOnDevices{
 
@@ -461,7 +467,7 @@ a {
     justify-content: center;
     padding: 0 9%;
     @include w(1024px) {
-      padding: 20px 16%;
+      padding: 20px  16% 65px 16%;
     }
   }
   &__content {
@@ -553,10 +559,10 @@ a {
     text-align: center;
     margin-top: -10px;
     img {
-      margin-bottom: 15px;
+      margin-bottom: 15px;  
 
     @include w($sm) {
-      margin: 0 auto 15px;
+      margin: 15px auto 15px;
    }
     }
     a {

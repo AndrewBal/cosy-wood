@@ -96,6 +96,65 @@
 }
 
 
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 35px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #b7c1c4;
+    justify-content: space-between;
+    &__pay ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include w($sm) {
+            justify-content: center;
+        }
+    }
+    &__pay {
+        li {
+            margin: 0 15px;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            @include w($sm) {         
+               margin: 0 6px;
+            }
+        img {
+            max-height: 25px;
+            @include w($sm) {         
+                max-height: 16px;
+            }
+        }
+        
+    } 
+    @include w(1400px) {
+        width: 100%;
+        order: -1;
+        padding-bottom: 25px;
+    }
+     
+    }
+    
+    &__dev {
+        text-align: center;   
+    } 
+    &__copy {
+        width: 33%;
+        @include w($sm) {         
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    @include w($sm) {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 1199.98px) {
     .footer-menu  {
       display: none;
