@@ -75,5 +75,19 @@ $(document).ready(function () {
     $(this).parents(".header-main__search").removeClass("open");
   });
 
+
+
+  $(".category-filter__group-title").click(function(){
+    $(this).next(".category-filter__group-list").slideToggle();
+    $(this).parent(".category-filter__group").toggleClass("close");
+  });
+
+
+  $(".category-filter__footer .btn").click(function(){
+    $('input[type = "checkbox"]').prop('checked', false);
+    $('input[type = "radio"]').prop('checked', false);
+    
+  });
+
 });
 
