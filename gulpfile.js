@@ -25,12 +25,11 @@ gulp.task('server', function() {
 
 /*  --------------  Pug Compile  --------------  */
 gulp.task('templates:compile', function buildHTML() {
-    return gulp.src('templates/index.pug')
-        .pipe(pug({
-             pretty: true
-        }))
-
-        .pipe(gulp.dest('build'))
+    return gulp.src(['templates/*.pug'])
+    .pipe(pug({
+        pretty:true
+    }))
+    .pipe(gulp.dest('./build'));
 });
 
 

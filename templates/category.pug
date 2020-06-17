@@ -1,0 +1,138 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#category
+    include header
+    main.category
+        .breadcrumbs
+            .container
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="index.html") Home
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="catalog.html") Tables
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link Dining Tables By Legs Design
+        .container
+            .heading Dining Tables By Legs Design
+            .category-section          
+                .category-section__left-column
+                    form.category-filter
+                        .category-filter__title FILTER
+                        .category-filter__group
+                            .category-filter__group-title SIZE:
+                            .category-filter__group-list
+                                div(class="checkbox filter-item")
+                                    label(for="size-1")
+                                        span.checkbox-name 6 seater 280x100x75h cm
+                                            span.count (12)
+                                        input( type="checkbox" id="size-1" name="size-1")
+                                        span.checkmark
+                                div(class="checkbox filter-item")
+                                    label(for="size-2")
+                                        span.checkbox-name 6/8 seater 280x100x75h cm
+                                            span.count (7)
+                                        input( type="checkbox" id="size-2" name="size-2")
+                                        span.checkmark
+                                div(class="checkbox filter-item")
+                                    label(for="size-3")
+                                        span.checkbox-name 8 seater 280x100x75h cm
+                                            span.count (5)
+                                        input( type="checkbox" id="size-3" name="size-1")
+                                        span.checkmark
+                                div(class="checkbox filter-item")
+                                    label(for="size-4")
+                                        span.checkbox-name 8/12 seater 280x100x75h cm
+                                            span.count (10)
+                                        input( type="checkbox" id="size-4" name="size-1")
+                                        span.checkmark
+                                div(class="checkbox filter-item")
+                                    label(for="size-5")
+                                        span.checkbox-name 12 seater 280x100x75h cm
+                                            span.count (8)
+                                        input( type="checkbox" id="size-5" name="size-1")
+                                        span.checkmark
+                        .category-filter__group
+                            .category-filter__group-title Bench Option:
+                            .category-filter__group-list
+                                .form-group-radio
+                                    div(class="radio filter-item")
+                                        input(id="Bench-1" name="Bench" type="radio")
+                                        label( class="radio-label" for="Bench-1")
+                                            span.radio-circle
+                                            span.radio-name No bench
+                                    div(class="radio filter-item")
+                                        input(id="Bench-2" name="Bench" type="radio")
+                                        label( class="radio-label" for="Bench-2")
+                                            span.radio-circle
+                                            span.radio-name One bench
+                                    div(class="radio filter-item")
+                                        input(id="Bench-3" name="Bench" type="radio")
+                                        label( class="radio-label" for="Bench-3")
+                                            span.radio-circle
+                                            span.radio-name Two bench
+                        .category-filter__group
+                            .category-filter__group-title WOOD FINISH:
+                            .category-filter__group-list
+                                div(class="checkbox filter-item")
+                                    label(for="wood-1")
+                                        span.checkbox-name Beige Pine
+                                            span.count (12)
+                                        input( type="checkbox" id="wood-1" name="wood-1")
+                                        span.checkmark
+                                div(class="checkbox filter-item")
+                                    label(for="wood-2")
+                                        span.checkbox-name Brown Pine
+                                            span.count (7)
+                                        input( type="checkbox" id="wood-2" name="wood-2")
+                                        span.checkmark
+                                div(class="checkbox filter-item")
+                                    label(for="wood-3")
+                                        span.checkbox-name Dark Grey Pine
+                                            span.count (5)
+                                        input( type="checkbox" id="wood-3" name="wood-3")
+                                        span.checkmark
+                                div(class="checkbox filter-item")
+                                    label(for="wood-4")
+                                        span.checkbox-name Grey Pine
+                                            span.count (10)
+                                        input( type="checkbox" id="wood-4" name="wood-4")
+                                        span.checkmark
+                .category-section__center-column
+                    .product-list
+                        .product-card
+                            a.product-card__image(href='product.html')
+                                img.product-card__image-first(src="img/product.jpg")
+                                img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card
+                            a.product-card__image(href='product.html')
+                                img.product-card__image-first(src="img/product.jpg")
+                                img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card
+                            a.product-card__image(href='product.html')
+                                img.product-card__image-first(src="img/product.jpg")
+                                img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card
+                            a.product-card__image(href='product.html')
+                                img.product-card__image-first(src="img/product.jpg")
+                                img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card
+                            a.product-card__image(href='product.html')
+                                img.product-card__image-first(src="img/product.jpg")
+                                img.product-card__image-second(src="img/product_2.jpg")
+                .category-container
+
+            
+    include footer
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+script(src="https://unpkg.com/swiper/js/swiper.min.js")
+script(src="js/script.js")

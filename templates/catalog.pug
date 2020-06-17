@@ -1,0 +1,54 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#catalog
+    include header
+    main.catalog
+        .breadcrumbs
+            .container
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="index.html") Home
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link Tables
+        .catalog-section
+            .container
+                .heading Bespoke Tables
+                    .catalog-section-cards
+                        a.catalog-card(href="category.html")
+                            .catalog-card__image
+                                img(src="img/catalog-card.jpg")
+                            .catalog-card__text
+                                .catalog-card__text-name EXTENDABLE TABLES
+                                .catalog-card__text-value 128 models
+                        a.catalog-card(href="category.html")
+                            .catalog-card__image
+                                img(src="img/catalog-card.jpg")
+                            .catalog-card__text
+                                .catalog-card__text-name EXTENDABLE TABLES
+                                .catalog-card__text-value 128 models
+                        a.catalog-card(href="category.html")
+                            .catalog-card__image
+                                img(src="img/catalog-card.jpg")
+                            .catalog-card__text
+                                .catalog-card__text-name EXTENDABLE TABLES
+                                .catalog-card__text-value 128 models
+                        a.catalog-card(href="category.html")
+                            .catalog-card__image
+                                img(src="img/catalog-card.jpg")
+                            .catalog-card__text
+                                .catalog-card__text-name EXTENDABLE TABLES
+                                .catalog-card__text-value 128 models
+    include footer
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+script(src="https://unpkg.com/swiper/js/swiper.min.js")
+script(src="js/script.js")
