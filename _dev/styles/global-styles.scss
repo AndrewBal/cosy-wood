@@ -6,7 +6,16 @@ body {
     font-size: 1rem;
     color: #303030;
     background: #efefef;
+
+    @include w($md){
+        margin-top: 125px;
+    }
+    @include w($sm){
+        margin-top: 60px;
+    }
 }
+
+
 .title {
     text-align: center;
     text-transform: uppercase;

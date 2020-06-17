@@ -5,9 +5,18 @@
     display: flex;
     &__left-column {
         flex: 0 0 25%;
+        @include w($md) {
+            display: none;
+        }
     }
     &__center-column {
         flex: 0 0 75%;
+        padding-bottom: 100px;
+        //----------------media----------------
+        @include w($md) {
+            flex: 0 0 100%;
+            padding-bottom: 50px;
+        }
    }
 }
 
@@ -19,6 +28,9 @@
 #category .heading {
     padding-left: 25%;
     padding-bottom: 50px;
+    @include w($md) {
+        padding-left: 0;
+    }
 }
 
 .category-filter {
@@ -48,14 +60,34 @@
     padding-bottom: 60px;
 }
 
-.product-card {
+#category .product-card {
     width: calc(25% - 20px);
-   
+    margin: 20px 10px;
     @include minw($md) {
         width: calc(33.33% - 20px);
         margin: 0 10px 40px;    
     }
+    @include w(1024px){
+        width: calc(50% - 20px);
+    }
+    @include w($sm){
+        width: 100%;
+    }
 }
+
+
+.product-card--fake {
+    background: #fff;
+    align-self: flex-start;
+    position: relative;
+    .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
 
 
 .category-filter__group-title {
