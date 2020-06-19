@@ -194,6 +194,7 @@ body {
     display: flex;
     white-space: nowrap;
     overflow-y: auto;
+    flex-wrap: wrap;
     &__item {
         display: inline-block;
         &-link {

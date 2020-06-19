@@ -51,6 +51,24 @@ $(document).ready(function () {
     }
   });
 
+
+
+  var productSwiper = new Swiper(".product-container .swiper-container", {
+    speed: 400,
+    spaceBetween: 0,
+    slidesPerView: 1,
+    loop: false,
+    navigation: {
+      nextEl: ".product-container .swiper-button-next",
+      prevEl: ".product-container .swiper-button-prev",
+    },
+    pagination: {
+      el: ".product-container .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+  });
+
   $(".tab-button").click(function () {
     $(".tab-button").removeClass("active");
     $(this).addClass("active");
@@ -88,6 +106,8 @@ $(document).ready(function () {
     $('input[type = "radio"]').prop('checked', false);
     
   });
+
+
 
 });
 

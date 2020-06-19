@@ -1,0 +1,111 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#product
+    include header
+    main.product
+        .breadcrumbs
+            .container
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="index.html") Home
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="catalog.html") Tables
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="category.html") Dining Tables By Legs Design
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="category.html") London
+        .container
+            .product-header
+                .product-header__title
+                    h1 London
+                .product-header__info
+                    .product-header__info-time
+                        img(src="img/clock.svg")
+                        p Lead time 4 weeks
+                    .product-header__info-rating
+                        .rating__stars
+                            -for (var x = 0; x < 5; x++)
+                                i(class="fa fa-star" aria-hidden="true")
+                        a.link(href="#reviews") (7)
+        .product-container
+            .container
+                .product-container_left-column
+                    .product-gallery(class="slider")
+                        .product-gallery__info 
+                            span All pictures are shown for illustration purpose only
+                        .swiper-container
+                            .swiper-wrapper
+                                a.swiper-slide( data-fancybox="gallery" href="img/product.jpg")
+                                    img(src="img/product.jpg")
+                                a.swiper-slide( data-fancybox="gallery" href="img/product_2.jpg")
+                                    img(src="img/product_2.jpg")
+                                a.swiper-slide( data-fancybox="gallery" href="img/product.jpg")
+                                    img(src="img/product.jpg")
+                                a.swiper-slide( data-fancybox="gallery" href="img/product_2.jpg")
+                                    img(src="img/product_2.jpg")
+                            .swiper-button-prev
+                            .swiper-button-next
+                        .swiper-pagination
+                .product-container_right-column
+                    .product-variation
+                        .product-action
+                            .product-action__item
+                                .product-action-title choose size:  
+                                .toggle-group
+                                    div(class="toggle-group__item active")
+                                        .big-radio-group
+                                            .big-radio-item        
+                                                input(id="size-1" name="size" type="radio" checked="checked")
+                                                label(for="size-1")
+                                                    p 6 seater
+                                                    span 280x100x75h cm 
+                                            .big-radio-item        
+                                                input(id="size-2" name="size" type="radio")
+                                                label(for="size-2")
+                                                    p 6/8 seater
+                                                    span 180x80x75h cm
+                                            .big-radio-item        
+                                                input(id="size-3" name="size" type="radio")
+                                                label(for="size-3")
+                                                    p  8 seater
+                                                    span 200x90x75h cm
+                                            .big-radio-item        
+                                                input(id="size-4" name="size" type="radio")
+                                                label(for="size-4")
+                                                    p 10 seater
+                                                    span 240x180x75h cm
+                                            .big-radio-item        
+                                                input(id="size-5" name="size" type="radio")
+                                                label(for="size-5")
+                                                    p 12 seater
+                                                    span 280x100x75h cm
+                                            
+                            .product-action__item
+                                .product-action-title Choose Bench Option: 
+                            .product-action__item
+                                .product-action-title Choose Wood Finish:                   
+                            .product-action__item
+                                .product-action-title Choose Metal Finish:
+       
+
+
+
+
+
+    include footer
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+script(src="https://unpkg.com/swiper/js/swiper.min.js")
+script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
+
+script(src="js/script.js")
