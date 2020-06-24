@@ -108,6 +108,15 @@ $(document).ready(function () {
   });
 
 
+  $("#product").on("click", ".toggle-group__button", function () {
+
+    var e = $(this).closest(".toggle-group__item");
+    console.log(e.index());
+    e.removeClass("active"),
+      e.index()
+        ? e.prev().toggleClass("active")
+        : e.next().toggleClass("active");
+  });
 
 });
 

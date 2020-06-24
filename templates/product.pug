@@ -54,6 +54,71 @@ body#product
                             .swiper-button-prev
                             .swiper-button-next
                         .swiper-pagination
+                    .product-info
+                        .product-info-item
+                            .product-info-item__title Description
+                            .product-info-item__content
+                                p This rustic industrial style clothing rail has a great industrial look and simple stylish storage solution for hanging clothes and hats; displaying shoes and accessories. It’s made of brown reclaimed pine wood and old steel pipes. The rail is sturdy and can hold a good amount of weight freestanding. Unit flaunts two spacious shelves for generous storage space. Top and bottom shelves supports load of 10-15 kg. This item can be custom-made to your own size and specification. you can choose from various finishes and base options.
+                        .product-info-item
+                            .product-info-item__title Additional information
+                            .product-info-item__content
+                                table.table
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                                    tr
+                                        td Table-top finish
+                                        td Matt varnish
+                        .product-info-item
+                            .product-info-item__title Sketch
+                            .product-info-item__content
+                                img(src="img/sketch.jpg" alt="scetch")
+                        .product-info-item 
+                            .product-info-item__title Important to know
+                            .product-info-item__content
+                                p Solid wood is a natural living, breathing material that ages over time. It has characteristics that include cracks in the wood, knots, mineral deposits, inclusions, as well as grain and pigment variations (sometimes filler or a wood patch is required). However, they do not interfere with the structural integrity of the piece, but instead give each piece its unique character. Seasoning and drying the wood reduces splitting and warping, but some natural movement is to be expected. Variations in height, width or depth for all pieces may vary by as much as one inch. Use coasters or placemats to help prevent marks or stains. Wipe the item clean with a soft, dry cloth after each use. Each item is handcrafted with meticulous care. Given its handmade and hand-finished nature, variations in the wood or metal work are to be expected and celebrated. Each item is unique and no two are exactly alike.
+                        .product-info-item
+                            .product-info-item__title CUSTOMERS REVIEWS
+                            .product-info-item__content
+                                .product-info-reviews__list
+                                    .review-card
+                                        .review-card__head
+                                            .review-card__author
+                                                img(src="img/avatar.jpg")
+                                                span Jess
+                                            div(class="review-card__rating rating")
+                                                .rating__value 5.0
+                                                .rating__stars
+                                                    i(class="fa fa-star" aria-hidden="true")
+                                                    i(class="fa fa-star" aria-hidden="true")
+                                                    i(class="fa fa-star" aria-hidden="true")
+                                                    i(class="fa fa-star" aria-hidden="true")
+                                                    i(class="fa fa-star" aria-hidden="true")
+                                        .review-card__body
+                                            .review-card__text
+                                                p Brilliant piece of furniture. Great workmanship. Dealing with them over email was quick and easy and they are very happy to make anything bespoke. Delivery was easy and well protected. Highly recommended.
+                                                .review-card__date 08 Jan 2019
                 .product-container_right-column
                     .product-variation
                         .product-action
@@ -87,13 +152,118 @@ body#product
                                                 label(for="size-5")
                                                     p 12 seater
                                                     span 280x100x75h cm
+                                            button(class="big-radio-item toggle-group__button")
+                                                p Enter your size
+                                    .toggle-group__item
+                                        .big-radio-group
+                                            .custom-size
+                                                .custom-size__item
+                                                    label.custom-size__item-label(for="weight") weight
+                                                    .custom-size__item-control
+                                                        input( type="number" id="weight" value="120")
+                                                        span cm
+                                                .custom-size__symbol x
+                                                .custom-size__item
+                                                    label.custom-size__item-label(for="diagonal") diagonal
+                                                    .custom-size__item-control
+                                                        input(type="number" id="diagonal" value="120")
+                                                        span cm
+                                                button.toggle-group__button
+                                                    p Choose size
                                             
                             .product-action__item
                                 .product-action-title Choose Bench Option: 
+                                .big-radio-group
+                                    .big-radio-item
+                                        input(id="bench-1" name="bench" type="radio" checked="checked")
+                                        label(for="bench-1") No bench
+                                    .big-radio-item
+                                        input(id="bench-2" name="bench" type="radio")
+                                        label(for="bench-2") One bench
+                                    .big-radio-item
+                                        input(id="bench-3" name="bench" type="radio")
+                                        label(for="bench-3") Two bench
                             .product-action__item
-                                .product-action-title Choose Wood Finish:                   
+                                .product-action-title Choose Wood Finish:
+                                    .material-group
+                                        .material-item(data-title="Wood name 1")
+                                            input(id="wood-1" name="wood" type="radio" checked="checked")
+                                            label(for="wood-1")
+                                                img(src="img/wood-1.jpg")
+                                        .material-item(data-title="Wood name 2")
+                                            input(id="wood-2" name="wood" type="radio")
+                                            label(for="wood-2")
+                                                img(src="img/wood-2.jpg")
+                                        .material-item(data-title="Wood name 3")
+                                            input(id="wood-3" name="wood" type="radio")
+                                            label(for="wood-3")
+                                                img(src="img/wood-3.jpg")
+                                        .material-item(data-title="Wood name 4")
+                                            input(id="wood-4" name="wood" type="radio")
+                                            label(for="wood-4")
+                                                img(src="img/wood-4.jpg")
+                                        .material-item(data-title="Wood name 5")
+                                            input(id="wood-5" name="wood" type="radio")
+                                            label(for="wood-5")
+                                                img(src="img/wood-5.jpg")
+                                        .material-item(data-title="Wood name 6")
+                                            input(id="wood-6" name="wood" type="radio")
+                                            label(for="wood-6")
+                                                img(src="img/wood-6.jpg")
                             .product-action__item
                                 .product-action-title Choose Metal Finish:
+                                    .material-group
+                                        .material-item(data-title="metal name 1")
+                                            input(id="metal-1" name="metal" type="radio" checked="checked")
+                                            label(for="metal-1")
+                                                img(src="img/metal-1.jpg")
+                                        .material-item(data-title="metal name 2")
+                                            input(id="metal-2" name="metal" type="radio")
+                                            label(for="metal-2")
+                                                img(src="img/metal-2.jpg")
+                                        .material-item(data-title="metal name 3")
+                                            input(id="metal-3" name="metal" type="radio")
+                                            label(for="metal-3")
+                                                img(src="img/metal-3.jpg")
+                                        .material-item(data-title="metal name 4")
+                                            input(id="metal-4" name="metal" type="radio")
+                                            label(for="metal-4")
+                                                img(src="img/metal-4.jpg")
+                            .sticky-rails
+                                .product-action__main
+                                    div(class="product-action__main--hidden product-header__info-time")
+                                        img(src="img/clock.svg")
+                                        p Lead time 4 weeks
+                                    div(class="product-action__main--hidden product-name") London
+                                    div(class="product-action__main--hidden product-header__info-rating")
+                                        .rating__stars
+                                            -for (var x = 0; x < 5; x++)
+                                                i(class="fa fa-star" aria-hidden="true")
+                                        a.link(href="#reviews") (7)
+                                    .product-action__main-buy
+                                        .product-price
+                                            .product-price-before £500.00
+                                            .product-price-current £460.00 
+                                        .counter    
+                                            button.counter__button(class="counter__decrement")
+                                                span -
+                                            input(type="text" class="counter__value" readonly="readonly" value="1")
+                                            button(class="counter__button counter__increment")
+                                                span +
+                                        button(class="btn btn--fill" id="add-to-cart") Add to cart
+                                    .product-action__main-share
+                                        .share
+                                            .share__title SHARE:
+                                            .share__list
+                                                a(href="#")
+                                                    i(class="fa fa-envelope" aria-hidden="true")
+                                                a(href="#")
+                                                    i(class="fa fa-pinterest-p" aria-hidden="true")
+                                                a(href="#")
+                                                    i(class="fa fa-twitter" aria-hidden="true")
+                                                a(href="#")
+                                                    i(class="fa fa-facebook" aria-hidden="true")
+
        
 
 

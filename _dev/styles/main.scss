@@ -609,6 +609,31 @@ a {
   }
 }
 
+
+.rating {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  &__value {
+    font-weight: 500;
+    font-size: 16px;
+    color: #52595b;
+    margin-right: 6px;
+    margin-top: 3px;
+  }
+
+  &__stars {
+    i {
+      font-size: 20px;
+      color: #52595b;
+    }
+  }
+}
+
+
+
+
+
 .reviews-section__buttons {
   text-align: center;
 }
