@@ -101,6 +101,12 @@ $(document).ready(function () {
   });
 
 
+  $(".product-info-item__title").click(function(){
+    $(this).next(".product-info-item__content").slideToggle();
+    $(this).parent(".product-info-item").toggleClass("close");
+  });
+
+
   $(".category-filter__footer .btn").click(function(){
     $('input[type = "checkbox"]').prop('checked', false);
     $('input[type = "radio"]').prop('checked', false);
