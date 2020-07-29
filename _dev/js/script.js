@@ -125,6 +125,29 @@ $(document).ready(function () {
         : e.next().toggleClass("active");
   });
 
+  $(".counter__button").on("click", function () {
+    var e = $(this).parent().find(".counter__value"),
+      t = Number(e.val());
+    $(this).hasClass("counter__decrement") ? 1 < t && e.val(--t) : e.val(++t),
+      console.log("product QUANTITY=" + t);
+  })
+
+
+  $("#add-to-cart").on("click", function () {
+    $.fancybox.open({
+      src: "#product-in-cart-popup",
+      type: "inline",
+      opts: {
+        touch: !1,
+        afterShow: function () {
+          setTimeout(function () {
+            $.fancybox.close();
+          }, 3e3);
+        },
+      },
+    });
+  })
+
 
 
 

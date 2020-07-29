@@ -14,6 +14,58 @@ body {
         margin-top: 60px;
     }
 }
+.btn-switch {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #231f20;
+    cursor: pointer;
+    padding-bottom: 13px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: .3s;
+        width: 0%;
+        height: 3px;
+        background: #231f20;
+    }   
+}
+
+.btn-switch.active {
+    &::after {
+        width: 100%;          
+    }
+}
+
+.btn-switch.disable {
+    color: #99a6aa;
+    pointer-events: none;
+}
+
+
+.btn-switch:hover:not(.disable)::after {
+    width: 100%;
+}
+
+.popup-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+    color: #52595b;
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+}
 
 
 .title {

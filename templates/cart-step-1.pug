@@ -1,0 +1,80 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#cart
+    include header
+    main.cart
+        .breadcrumbs
+            .container
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="index.html") Home
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="") Cart
+        .container
+            .heading Cart
+            .switch-group-wrapper 
+                .switch-group
+                    a(class="btn-switch active") Step 1 - Cart
+                    a(class="btn-switch" href="cart-step-2.html") Step 2 - Address & Delivery
+                    a(class="btn-switch disable") Step 3 - Payment
+                    a(class="btn-switch disable") Step 4 - Confirmation
+            div(class="wrapper cart-content cart-step-1")
+                .cart-step-1-form
+                    .cart-list
+                        .cart-item
+                            div(class="cart-item__col cart-item__product")
+                                .cart-item__col-head Product
+                                .cart-item__col-body
+                                    .cart-product
+                                        .cart-product__img
+                                            img(src="img/product_2.jpg")
+                                        .cart-product__text
+                                            p Albert Stripe
+                                            ul
+                                                li Size: 6 seater 150x75x75h cm
+                                                li Bench Option: No bench
+                                                li Wood Finish: Natural Oak
+                                                li Metal Finish: Matt black (powder coated)
+                            div(class="cart-item__col cart-item__price")
+                                .cart-item__col-head Price
+                                .cart-item__col-body
+                                    .cart-product-price £460.00
+                            div(class="cart-item__col cart-item__quantity")
+                                .cart-item__col-head Quantity
+                                .cart-item__col-body
+                                    .counter
+                                        button(class="counter__button counter__decrement")
+                                            span - 
+                                        input(class="counter__value" type="text" readonly="readonly" value="1")
+                                        button(class="counter__button counter__decrement")
+                                            span + 
+                            div(class="cart-item__col cart-item__sum")
+                                .cart-item__col-head Sum
+                                .cart-item__col-body
+                                    .cart-product-price £460.00
+                            div(class="cart-item__col cart-item__remove")
+                                .cart-item__col-head  
+                                .cart-item__col-body
+                                    .cart-product-remove Remove
+                                    
+
+
+
+
+    include footer
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
+
+script(src="js/script.js")

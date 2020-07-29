@@ -1,0 +1,146 @@
+ #cart .switch-group-wrapper {
+    margin-bottom: 70px;
+}
+
+
+.switch-group {
+    text-align: center;
+    padding-bottom: 10px;
+
+    .btn-switch {
+        margin: 0 25px 15px;
+        white-space: nowrap;
+        display: inline-block;
+        
+    }
+}
+
+.cart-item__col {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-list{
+	// ------------media-------------
+	@include minw(1024px){
+		.cart-item:not(:first-child){
+			.cart-item__col-head{
+				display: none;
+			}
+		}
+	}
+ 
+	.cart-item:last-child{
+		border-bottom: 1px solid $grey;
+	}
+}
+
+.cart-item__product {
+    width: 45%;
+}
+.cart-item__price {
+    width: 15%;
+}
+.cart-item__quantity {
+    width: 17%;
+}
+.cart-item__sum {
+    width: 15%;
+}
+.cart-item__remove {
+    width: 8%;
+}
+
+
+.cart-item {
+    display: flex;
+    &__col-head {
+        min-height: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.3;
+        color: #52595b;
+        padding-bottom: 5px;
+    }
+    &__col-body {
+        border-top: 1px solid #52595b;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.3;
+        color: #231f20;
+        padding-right: 3%;
+        flex-grow: 1;
+    }
+}
+
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    &__img {
+        img {
+            max-width: 180px;
+            max-height: 180px;
+            margin-right: 30px;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        color: #52595b;
+        line-height: 1.6;
+        font-family: 'Nunito Sans',sans-serif;
+        p {
+            font-size: 18px;
+            line-height: 1.3;
+            color: #231f20;
+            font-family: 'Nunito Sans',sans-serif;
+            margin-bottom: 5px;
+        }
+        ul {
+
+        }
+    }
+}
+
+
+.counter {
+    height: 60px;
+    border: 1px solid #52595b;
+    max-width: 160px;
+    display: flex;
+    justify-content: space-between;
+    &__button {
+        width: 40px;
+        flex-grow: 1;
+        color: #b7c1c4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        &:hover {
+                color: #231f20;
+        }
+        span {
+            vertical-align: middle;
+        }
+    }
+    &__decrement {
+        span {
+            margin-bottom: .15em;
+        }
+    }
+}
+
+.cart-product-remove {
+    border-bottom: 2px solid currentColor;
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+        border-color: transparent;
+    }
+}

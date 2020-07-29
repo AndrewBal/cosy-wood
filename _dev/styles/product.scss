@@ -663,3 +663,48 @@ table, td, th {
         padding: 0;
     }
 }
+
+
+
+
+.product-in-cart-popup {
+    width: 350px;
+    padding: 30px;
+
+
+    .popup-title {
+        margin-bottom: 25px;
+    text-align: left;
+    font-size: 18px;
+    }
+}
+
+
+.mini-product-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    &__img {
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+
+.mini-product-card__body {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #231f20;
+}
+
+
+.product-in-cart-popup .btn {
+    width: 100%;
+    margin: 0;
+}
