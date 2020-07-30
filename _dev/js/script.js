@@ -130,6 +130,21 @@ $(document).ready(function () {
       t = Number(e.val());
     $(this).hasClass("counter__decrement") ? 1 < t && e.val(--t) : e.val(++t),
       console.log("product QUANTITY=" + t);
+  }),
+  $(".cart-product-remove").on("click", function () {
+    1 < $(".cart-item").length
+      ? $(this)
+          .closest(".cart-item")
+          .fadeOut(300, function () {
+            $(this).remove();
+          })
+      : ($(this)
+          .closest(".cart-item")
+          .fadeOut(300, function () {
+            $(this).remove();
+          }),
+        $(".cart-step-1-form").hide(),
+        $(".cart-empty").fadeIn());
   })
 
 
@@ -148,6 +163,16 @@ $(document).ready(function () {
     });
   })
 
+
+$("#delivery-2").on("click", function(){
+  if(document.getElementById("delivery-2").checked == true) {
+    $(".nova-poshta-form").show();
+  }
+});
+$("#delivery-1").on("click", function(){
+  $(".nova-poshta-form").hide();
+});
+  
 
 
 
