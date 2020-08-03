@@ -20,170 +20,191 @@ body#cart
                         a.breadcrumbs-list__item-link(href="") Cart
         .container
             .heading Cart
+            .cart-empty(style="display: none")
+                p You haven’t added anything to the basket yet
+                a(class="btn btn--fill" href="index.html") home page  
+             
             div(class="cart-content cart-step-1")
                 .cart-step-1-form
-                    span#customer_place
-                        p.cart__heading About the buyer
-                        .card-block
-                            //- .form-row
-                            //-         .form-group-radio
-                            //-             .radio(class="" title="Оформить как гость" data-auth="guest")
-                            //-                 input(id="type_auth_guest" checked="checked" name="type_auth" type="radio")
-                            //-                 label(class="radio-label" for="type_auth_guest")
-                            //-                     span.radio-circle
-                            //-                     span.radio-name Гость
-                            //-             .radio(class="" title="Регистрация нового покупателя" data-auth="registration")
-                            //-                 input(id="type_auth_registration"  name="type_auth" type="radio")
-                            //-                 label(class="radio-label" for="type_auth_registration")
-                            //-                     span.radio-circle
-                            //-                     span.radio-name Регистрация
-                            //-             .radio(class="" title="Вход для зарегистрированого покупателя" data-auth="login")
-                            //-                 input(id="type_auth_login"  name="type_auth" type="radio")
-                            //-                 label(class="radio-label" for="type_auth_login")
-                            //-                     span.radio-circle
-                            //-                     span.radio-name Вход
-                            .form-row
-                                select#id_country(name="id_country" placeholder="country" class="form-control" required="required")
-                                    option(disabled="disabled" selected="selected") Country
-                                    option(value="country 1") country 1
-                                    option(value="country 2") country 2
-                                    option(value="country 3") country 3
-                                    option(value="country 4") country 4
-                                    option(value="country 5") country 5
-                            .form-row
-                                input(class="form-control" required title="Name" id="firstname" name="firstname" value type="text" placeholder="First name")
-                            .form-row
-                                input(class="form-control" required title="Name" id="secondname" name="secondname" value type="text" placeholder="Second name")
-                            .form-row
-                                input(class="form-control" required title="E-mail" id="email" name="email" value type="email" placeholder="E-mail")
-                            .form-row
-                                input(class="form-control" required title="phone" id="phone" name="phone" value type="phone" placeholder="Phone")
-                             
-                            .delivery-block
-                                p.cart__heading Доставка
-                                .form-group-radio
-                                    .radio
-                                        input(id="delivery-1" checked="checked" name="delivery" type="radio")
-                                        label(class="radio-label" for="delivery-1")
-                                            span.radio-circle
-                                            span.radio-name Самовывоз из магазина
-                                    .radio
-                                        input(id="delivery-2"  name="delivery" type="radio")
-                                        label(class="radio-label" for="delivery-2")
-                                            span.radio-circle
-                                            span.radio-name Новая почта
-                                .nova-poshta-form
-                                    .form-row
-                                        select#id_area_delivery(name="id_area_delivery" placeholder="State" class="form-control" required="required")
-                                            option(disabled="disabled" selected="selected") State
-                                            option(value="state 1") state 1
-                                            option(value="state 2") state 2
-                                            option(value="state 3") state 3
-                                            option(value="state 4") state 4
-                                            option(value="state 5") state 5
-                                    .form-row
-                                        select#id_city_delivery(name="id_city_delivery" placeholder="City" class="form-control" required="required")
-                                            option(disabled="disabled" selected="selected") City
-                                            option(value="city 1") city 1
-                                            option(value="city 2") city 2
-                                            option(value="city 3") city 3
-                                            option(value="city 4") city 4
-                                            option(value="city 5") city 5
-                                    .form-row
-                                        select#id_ware_delivery(name="id_ware_delivery" placeholder="Address" class="form-control" required="required")
-                                            option(disabled="disabled" selected="selected") Address
-                                            option(value="Address 1") Address 1
-                                            option(value="Address 2") Address 2
-                                            option(value="Address 3") Address 3
-                                            option(value="Address 4") Address 4
-                                            option(value="Address 5") Address 5
-                            .payment_place
-                                p.cart__heading Payment
-                                .form-group-radio
-                                    .radio
-                                        input(id="payment-1" checked="checked" name="payment" type="radio")
-                                        label(class="radio-label" for="payment-1")
-                                            span.radio-circle
-                                            span.radio-name Оплата наложенным платежом
-                                    .radio
-                                        input(id="payment-2"  name="payment" type="radio")
-                                        label(class="radio-label" for="payment-2")
-                                            span.radio-circle
-                                            span.radio-name Оплата на карту
+                    .cart__left
+                        span#customer_place
+                            p.cart__heading About the buyer
+                            .card-block
+                                //- .form-row
+                                //-         .form-group-radio
+                                //-             .radio(class="" title="Оформить как гость" data-auth="guest")
+                                //-                 input(id="type_auth_guest" checked="checked" name="type_auth" type="radio")
+                                //-                 label(class="radio-label" for="type_auth_guest")
+                                //-                     span.radio-circle
+                                //-                     span.radio-name Гость
+                                //-             .radio(class="" title="Регистрация нового покупателя" data-auth="registration")
+                                //-                 input(id="type_auth_registration"  name="type_auth" type="radio")
+                                //-                 label(class="radio-label" for="type_auth_registration")
+                                //-                     span.radio-circle
+                                //-                     span.radio-name Регистрация
+                                //-             .radio(class="" title="Вход для зарегистрированого покупателя" data-auth="login")
+                                //-                 input(id="type_auth_login"  name="type_auth" type="radio")
+                                //-                 label(class="radio-label" for="type_auth_login")
+                                //-                     span.radio-circle
+                                //-                     span.radio-name Вход
+                                .form-row
+                                    select#id_country(name="id_country" placeholder="country" class="form-control" required="required")
+                                        option(disabled="disabled" selected="selected") Country
+                                        option(value="country 1") country 1
+                                        option(value="country 2") country 2
+                                        option(value="country 3") country 3
+                                        option(value="country 4") country 4
+                                        option(value="country 5") country 5
+                                .form-row
+                                    input(class="form-control" required title="Name" id="firstname" name="firstname" value type="text" placeholder="First name")
+                                .form-row
+                                    input(class="form-control" required title="Name" id="secondname" name="secondname" value type="text" placeholder="Second name")
+                                .form-row
+                                    input(class="form-control" required title="E-mail" id="email" name="email" value type="email" placeholder="E-mail")
+                                .form-row
+                                    input(class="form-control" required title="phone" id="phone" name="phone" value type="phone" placeholder="Phone")
+                                
+                                .delivery-block
+                                    p.cart__heading Доставка
+                                    .form-group-radio
+                                        .radio
+                                            input(id="delivery-1" checked="checked" name="delivery" type="radio")
+                                            label(class="radio-label" for="delivery-1")
+                                                span.radio-circle
+                                                span.radio-name Самовывоз из магазина
+                                        .radio
+                                            input(id="delivery-2"  name="delivery" type="radio")
+                                            label(class="radio-label" for="delivery-2")
+                                                span.radio-circle
+                                                span.radio-name Новая почта
+                                    .nova-poshta-form
+                                        .form-row
+                                            select#id_area_delivery(name="id_area_delivery" placeholder="State" class="form-control" required="required")
+                                                option(disabled="disabled" selected="selected") State
+                                                option(value="state 1") state 1
+                                                option(value="state 2") state 2
+                                                option(value="state 3") state 3
+                                                option(value="state 4") state 4
+                                                option(value="state 5") state 5
+                                        .form-row
+                                            select#id_city_delivery(name="id_city_delivery" placeholder="City" class="form-control" required="required")
+                                                option(disabled="disabled" selected="selected") City
+                                                option(value="city 1") city 1
+                                                option(value="city 2") city 2
+                                                option(value="city 3") city 3
+                                                option(value="city 4") city 4
+                                                option(value="city 5") city 5
+                                        .form-row
+                                            select#id_ware_delivery(name="id_ware_delivery" placeholder="Address" class="form-control" required="required")
+                                                option(disabled="disabled" selected="selected") Address
+                                                option(value="Address 1") Address 1
+                                                option(value="Address 2") Address 2
+                                                option(value="Address 3") Address 3
+                                                option(value="Address 4") Address 4
+                                                option(value="Address 5") Address 5
+                                .payment_place
+                                    p.cart__heading Payment
+                                    .form-group-radio
+                                        .radio
+                                            input(id="payment-1" checked="checked" name="payment" type="radio")
+                                            label(class="radio-label" for="payment-1")
+                                                span.radio-circle
+                                                span.radio-name Оплата наложенным платежом
+                                        .radio
+                                            input(id="payment-2"  name="payment" type="radio")
+                                            label(class="radio-label" for="payment-2")
+                                                span.radio-circle
+                                                span.radio-name Оплата на карту
 
-                    
-                    .cart-list
-                        .cart-item
-                            div(class="cart-item__col cart-item__product")
-                                .cart-item__col-head Product
-                                .cart-item__col-body
-                                    .cart-product
-                                        .cart-product__img
-                                            img(src="img/product_2.jpg")
-                                        .cart-product__text
-                                            p Albert Stripe
-                                            ul
-                                                li Size: 6 seater 150x75x75h cm
-                                                li Bench Option: No bench
-                                                li Wood Finish: Natural Oak
-                        
-                            div(class="cart-item__col cart-item__price")
-                                .cart-item__col-head Price
-                                .cart-item__col-body
-                                    .cart-product-price £460.00
-                            div(class="cart-item__col cart-item__quantity")
-                                .cart-item__col-head Quantity
-                                .cart-item__col-body
-                                    .counter
-                                        button(class="counter__button counter__decrement")
-                                            span - 
-                                        input(class="counter__value" type="text" readonly="readonly" value="1")
-                                        button(class="counter__button counter__decrement")
-                                            span + 
-                            div(class="cart-item__col cart-item__sum")
-                                .cart-item__col-head Sum
-                                .cart-item__col-body
-                                    .cart-product-price £460.00
-                            div(class="cart-item__col cart-item__remove")
-                                .cart-item__col-head  
-                                .cart-item__col-body
-                                    .cart-product-remove Remove
-                        .cart-item
-                            div(class="cart-item__col cart-item__product")
-                                .cart-item__col-head Product
-                                .cart-item__col-body
-                                    .cart-product
-                                        .cart-product__img
-                                            img(src="img/product_2.jpg")
-                                        .cart-product__text
-                                            p Albert Stripe
-                                            ul
-                                                li Size: 6 seater 150x75x75h cm
-                                                li Bench Option: No bench
-                                                li Wood Finish: Natural Oak
-                                                li Metal Finish: Matt black (powder coated)
-                            div(class="cart-item__col cart-item__price")
-                                .cart-item__col-head Price
-                                .cart-item__col-body
-                                    .cart-product-price £460.00
-                            div(class="cart-item__col cart-item__quantity")
-                                .cart-item__col-head Quantity
-                                .cart-item__col-body
-                                    .counter
-                                        button(class="counter__button counter__decrement")
-                                            span - 
-                                        input(class="counter__value" type="text" readonly="readonly" value="1")
-                                        button(class="counter__button counter__decrement")
-                                            span + 
-                            div(class="cart-item__col cart-item__sum")
-                                .cart-item__col-head Sum
-                                .cart-item__col-body
-                                    .cart-product-price £460.00
-                            div(class="cart-item__col cart-item__remove")
-                                .cart-item__col-head  
-                                .cart-item__col-body
-                                    .cart-product-remove Remove            
-                  
+                    .cart__right
+                        .cart-list
+                            .cart-item
+                                div(class="cart-item__col cart-item__product")
+                                    .cart-item__col-head Product
+                                    .cart-item__col-body
+                                        .cart-product
+                                            .cart-product__img
+                                                img(src="img/product_2.jpg")
+                                            .cart-product__text
+                                                p Albert Stripe
+                                                ul
+                                                    li Size: 6 seater 150x75x75h cm
+                                                    li Bench Option: No bench
+                                                    li Wood Finish: Natural Oak
+                            
+                                div(class="cart-item__col cart-item__price")
+                                    .cart-item__col-head Price
+                                    .cart-item__col-body
+                                        .cart-product-price £460.00
+                                div(class="cart-item__col cart-item__quantity")
+                                    .cart-item__col-head Quantity
+                                    .cart-item__col-body
+                                        .counter
+                                            button(class="counter__button counter__decrement")
+                                                span -
+                                            input(class="counter__value" type="text" readonly="readonly" value="1")
+                                            button(class="counter__button counter__increment")
+                                                span +
+                                div(class="cart-item__col cart-item__sum")
+                                    .cart-item__col-head Sum
+                                    .cart-item__col-body
+                                        .cart-product-price £460.00
+                                div(class="cart-item__col cart-item__remove")
+                                    .cart-item__col-head  
+                                    .cart-item__col-body
+                                        .cart-product-remove Remove
+                            .cart-item
+                                div(class="cart-item__col cart-item__product")
+                                    .cart-item__col-head Product
+                                    .cart-item__col-body
+                                        .cart-product
+                                            .cart-product__img
+                                                img(src="img/product_2.jpg")
+                                            .cart-product__text
+                                                p Albert Stripe
+                                                ul
+                                                    li Size: 6 seater 150x75x75h cm
+                                                    li Bench Option: No bench
+                                                    li Wood Finish: Natural Oak
+                                               
+                                div(class="cart-item__col cart-item__price")
+                                    .cart-item__col-head Price
+                                    .cart-item__col-body
+                                        .cart-product-price £460.00
+                                div(class="cart-item__col cart-item__quantity")
+                                    .cart-item__col-head Quantity
+                                    .cart-item__col-body
+                                        .counter
+                                            button(class="counter__button counter__decrement")
+                                                span -
+                                            input(class="counter__value" type="text" readonly="readonly" value="1")
+                                            button(class="counter__button counter__increment")
+                                                span +
+                                div(class="cart-item__col cart-item__sum")
+                                    .cart-item__col-head Sum
+                                    .cart-item__col-body
+                                        .cart-product-price £460.00
+                                div(class="cart-item__col cart-item__remove")
+                                    .cart-item__col-head  
+                                    .cart-item__col-body
+                                        .cart-product-remove Remove            
+                        #checkout_place
+                            .card-block
+                                .cart-detailed-totals
+                                    .cart-summary-line
+                                        span.label Total without discount:
+                                        span.value £2128.20
+                                    .cart-summary-line
+                                        span.label Discount:
+                                        span.value £128.20
+                                    .cart-summary-line
+                                        span.label Total price:
+                                        span.value £2000
+                            .promo-code-form
+                                .promo-code-input
+                                    input( class="form-control" placeholder="Promo code" name="promo_code")
+                                a(class="btn btn--fill" href="cart-step-2.html") Processed to checkout
+ 
                              
 
 

@@ -1,0 +1,63 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#catalog
+    include header
+    main#account-section
+        .breadcrumbs
+            .container
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="index.html") Home
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link Personal details
+        .account-section
+            .container
+                .page-header
+                    .heading My account
+                    .switch-group-wrapper
+                        .switch-group
+                            a(class="btn-switch account-menu__item" href="account-orders.html") My orders
+                            a(class="btn-switch account-menu__item active" href="account-details.html") Personal details
+                .account
+                    div(class="account-content personal-details-wrapper")
+                        .account-title Personal details
+                        .personal-details
+                            form.personal-details-form(novalidate="novalidate")
+                                .form-title Personal information
+                                div(class="form-group form-group--add_label required")
+                                    label(for="first_name") First name
+                                    input(class="form-control valid" placeholder="First name" id="first_name" value="Aleksander" name="first_name" required="required")
+                                div(class="form-group form-group--add_label required")
+                                    label(for="last_name") Last name
+                                    input(class="form-control valid" placeholder="Last name" id="last_name" value="Matrosov" name="last_name" required="required")
+                                button.btn-password-change Change password
+                                .password-change-group(style="display: none")
+                                    .form-title Password Changing
+                                    div(class="form-group form-group--add_label required")
+                                        label(for="last_password") Last password
+                                        input(class="form-control  error" placeholder="Last password" id="last_password"  name="last_password" required="required")
+                                        label#last_password-error(class="error" for="last_password") This field is necessary
+                                    div(class="form-group form-group--add_label required")
+                                        label(for="new_password") New password
+                                        input(class="form-control error" placeholder="New password" id="new_password" name="new_password" required="required")
+                                        label#new_password-error(class="error" for="new_password") This field is necessary
+                                    div(class="form-group form-group--add_label required") 
+                                        label(for="repeat_password") Repeat
+                                        input(class="form-control error" placeholder="Repeat password" id="repeat_password" name="repeat_password" required="required")
+                                        label#repeat_password-error(class="error" for="repeat_password") This field is necessary
+
+
+    include footer
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+script(src="https://unpkg.com/swiper/js/swiper.min.js")
+script(src="js/script.js")

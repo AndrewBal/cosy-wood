@@ -1,0 +1,106 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#contacts
+    include header
+ 
+ 
+    main.search-result-section
+        .container
+            .heading Search:
+            form(class="search-result-section__search")
+                input(class="form-control" type="text" value="Table")
+                button(class="btn btn--fill") Find
+            .search-result-section__value 5 results found 
+            div(class="search-result-section__result product-card-container")
+                .product-card
+                    a.product-card__image(href="product.html")
+                        img.product-card__image-first(src="img/product.jpg")
+                        img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card__tag sale
+                    .product-card__title
+                        .product-card__name(href="product.html") Folly Ash
+                        a.product-card__rating(href="product.html#reviews")
+                                        i(class="fa fa-star" aria-hidden="true")
+                                        span 5
+                                        span.product-card__rating-reviews (12 rev)
+                    a.product-card__price
+                                strong from £580.00
+                                span.old-price £645.00  
+                    
+                .product-card
+                    a.product-card__image(href="product.html")
+                        img.product-card__image-first(src="img/product.jpg")
+                        img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card__tag sale
+                    .product-card__title
+                        .product-card__name(href="product.html") Folly Ash
+                        a.product-card__rating(href="product.html#reviews")
+                                        i(class="fa fa-star" aria-hidden="true")
+                                        span 5
+                                        span.product-card__rating-reviews (12 rev)
+                    a.product-card__price
+                                strong from £580.00
+                                span.old-price £645.00
+                .product-card
+                    a.product-card__image(href="product.html")
+                        img.product-card__image-first(src="img/product.jpg")
+                        img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card__tag new
+                    .product-card__title
+                        .product-card__name(href="product.html") Folly Ash
+                        a.product-card__rating(href="product.html#reviews")
+                                        i(class="fa fa-star" aria-hidden="true")
+                                        span 5
+                                        span.product-card__rating-reviews (12 rev)
+                    a.product-card__price
+                                strong from £580.00
+                                span.old-price £645.00
+                .product-card
+                    a.product-card__image(href="product.html")
+                        img.product-card__image-first(src="img/product.jpg")
+                        img.product-card__image-second(src="img/product_2.jpg")
+                    .product-card__title
+                        .product-card__name(href="product.html") Folly Ash
+                        a.product-card__rating(href="product.html#reviews")
+                                        i(class="fa fa-star" aria-hidden="true")
+                                        span 5
+                                        span.product-card__rating-reviews (12 rev)
+                    a.product-card__price
+                                strong from £580.00
+                                span.old-price £645.00
+                .product-card
+                    a.product-card__image(href="product.html")
+                        img.product-card__image-first(src="img/product.jpg")
+                        img.product-card__image-second(src="img/product_2.jpg")
+                        .product-card__tag new
+                    .product-card__title
+                        .product-card__name(href="product.html") Folly Ash
+                        a.product-card__rating(href="product.html#reviews")
+                                        i(class="fa fa-star" aria-hidden="true")
+                                        span 5
+                                        span.product-card__rating-reviews (12 rev)
+                    a.product-card__price
+                                strong from £580.00
+                                span.old-price £645.00
+                
+    
+
+    include footer
+
+
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+script(src="js/script.js")
+
+
+

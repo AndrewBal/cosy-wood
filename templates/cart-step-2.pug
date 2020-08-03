@@ -1,0 +1,39 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#cart
+    include header
+    main.cart
+        .breadcrumbs
+            .container
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="index.html") Home
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="") Cart
+        .container
+            .cart-step-2__message
+                p Thank you very much! Your order Nr. CS-1730
+                p Wait for confirmation
+                             
+
+
+
+
+
+    include footer
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
+
+script(src="js/script.js")

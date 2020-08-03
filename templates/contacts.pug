@@ -1,0 +1,63 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport' content='width=device-width')
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        title template
+body#contacts
+    include header
+ 
+    .breadcrumbs
+            .container
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="index.html") Home
+                    li.breadcrumbs-list__item
+                        a.breadcrumbs-list__item-link(href="")  Contact us
+    main.contact-us-section
+        .container
+            .heading Contact us
+            ul.contact-us-list
+                li
+                    a
+                        i(class="fa fa-mobile" aria-hidden="true")
+                        span 07948352636
+                li
+                    a
+                        i(class="fa fa-mobile" aria-hidden="true")
+                        span 02071172821
+                li
+                    a.contact-link
+                        i(class="fa fa-envelope" aria-hidden="true")
+                        span cw@cosywood.co.uk
+            .form-container
+                form(class="contact-form" novalidate="novalidate")
+                    div(class="form-group required")
+                        input(class="form-control" placeholder="First name" name="first_name" type="text" required="required")
+                
+                    div(class="form-group required")
+                        input(class="form-control" placeholder="Email" name="email" type="text" required="required")  
+            
+                    div(class="form-group required")
+                        input(class="form-control" placeholder="Phone" name="phone" type="text" required="required")
+                    .form-group
+                        textarea(class="form-control valid" placeholder="Your message" name="message" spellcheck="false" data-gramm="false" aria-invalid="false")
+                    button(class="btn-submit btn btn--fill") Send
+                
+    
+
+    include footer
+
+
+script(src="https://use.fontawesome.com/00ab51648d.js")
+script(src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous")
+script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+script(src="js/script.js")
+
+
+

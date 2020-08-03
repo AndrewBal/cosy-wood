@@ -3,7 +3,7 @@ header#header
         .container   
             .header-additional
                 nav.header-menu
-                    a.header-menu__item(href="") work with us
+                    a.header-menu__item(href="work-with-us.html") work with us
                     a.header-menu__item(href="") reviews
                     a.header-menu__item(href="") about us
                     a.header-menu__item(href="") shipping
@@ -72,7 +72,7 @@ header#header
                                 img(src="img/eng.png")
                                 span EN
                         li
-                            a(class="header-action__item hover-dash")
+                            a(class="header-action__item hover-dash" href="account-details.html")
                                 i(class="fa fa-user" aria-hidden="true")
                                 span Account
                         li
@@ -80,7 +80,7 @@ header#header
                                 i(class="fa fa-search" aria-hidden="true")
                                 span search
                         li
-                            a(class="cart-btn header-action__item hover-dash")
+                            a(class="cart-btn header-action__item hover-dash" href="cart-step-1.html" )
                                 i( class="fa fa-shopping-cart" aria-hidden="true")
                                 span cart 
                                 i.cart-btn__value (0)
@@ -132,7 +132,7 @@ header#header
                             form.search-bar__form
                                 label.search-bar__input
                                     i(class="fa fa-search" aria-hidden="true")
-                                    input(type="text" placeholder="Search...")
+                                    input(type="text" id="search-bar" placeholder="Search...")
                             button(class="search-bar__close" id="close-search-btn")
                                 i(class="fa fa-times" aria-hidden="true")
                     ul(class="header-action")
@@ -141,7 +141,7 @@ header#header
                                 img(src="img/eng.png")
                                 span EN
                         li
-                            a(class="header-action__item hover-dash")
+                            a(class="header-action__item hover-dash"  href="account-details.html")
                                 i(class="fa fa-user" aria-hidden="true")
                                 span Account
                         li
@@ -149,11 +149,21 @@ header#header
                                 i(class="fa fa-search" aria-hidden="true")
                                 span search
                         li
-                            a(class="cart-btn header-action__item hover-dash")
+                            a(class="cart-btn header-action__item hover-dash" href="cart-step-1.html")
                                 i( class="fa fa-shopping-cart" aria-hidden="true")
                                 span cart 
                                 i.cart-btn__value (0)
-
+.language-popup(id="language-popup" style="display: none" )
+    p Which language would you like us to use?
+    ul.language-list
+        li
+            a.language-link(href="index.html")
+                img(src="img/lang-1.svg")
+                span English
+        li
+            a.language-link(href="index.html")
+                img(src="img/lang-2.svg")
+                span Latvietis
                     
         
 

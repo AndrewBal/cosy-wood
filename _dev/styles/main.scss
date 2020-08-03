@@ -639,10 +639,7 @@ a {
   text-align: center;
 }
 
-.btn {
-  margin: 0 15px;
-  width: 220px;
-}
+ 
 .btn--outline {
   color: #52595b;
   border: 1px solid #52595b;
@@ -746,3 +743,187 @@ border: 1px solid #231f20;
 }
 }
 
+
+.work-with-us-section {
+  h2 {
+    font-size: 22px;
+    color: #231f20;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 30px;
+  }
+}
+
+.image-and-text{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 70px;
+
+	&--beliefs{
+		// ------------media-------------
+		@include w(1024px){
+			.image-and-text__child{
+				width: 100%;
+				&.image-and-text__text{
+					padding-left: 0!important;
+					h2{
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	&+.image-and-text{
+		margin-top: 0;
+	}
+	&__child{
+		width: 50%;
+	}
+	// ------------media-------------
+	@include w($sm){
+		margin-top: 20px;
+		&__child{
+			width: 100%;
+		}
+		&+.image-and-text{
+			.image-and-text__text{
+				order: 1;
+			}
+		}
+	}
+	&__image{
+		img{
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__text{
+		// padding-left: 60px;
+		// padding-right: calc((100vw - 1140px) / 2);
+		padding-bottom: 60px;
+		// ------------media-------------
+		@include w($sm){
+			padding-bottom: 30px;
+		}
+		h2{
+			text-align: left;
+		}
+		
+	}
+	
+	.image-and-text__image+.image-and-text__text{
+		padding-left: 60px;
+		padding-right: calc((100vw - 1140px) / 2);
+		// ------------media-------------
+		@include w($md){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		// ------------media-------------
+		@include w($sm){
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	.image-and-text__text{
+		padding-left: calc((100vw - 1140px) / 2);
+		padding-right: 60px;
+		background: #fff;
+		// ------------media-------------
+		@include w($md){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		// ------------media-------------
+		@include w($sm){
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}
+.image-banner img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.image-and-text__image+.image-and-text__text{
+  padding-left: 60px;
+  padding-right: calc((100vw - 1140px) / 2);
+  // ------------media-------------
+  @include w($md){
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  // ------------media-------------
+  @include w($sm){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.wrapper .image-and-text__image+.image-and-text__text {
+  padding-left: 60px;
+  padding-right: 0;
+}
+
+.wrapper .image-and-text__text {
+ 
+  background: 0 0;
+}
+
+.couple-box {
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-wrap: wrap;
+  &__item {
+    width: calc(50% - 20px);
+    margin: 10px;
+    background: #fff;
+    padding: 60px;
+    &-title{
+      font-weight: 500;
+      font-size: 18px;
+      color: #231f20;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    	// ------------media-------------
+		@include w($md){
+			padding: 30px;
+		}
+		// ------------media-------------
+		@include w($sm){
+			padding: 20px;
+			width: calc(100% - 20px);
+		}
+  }
+}
+ 
+
+
+.text-in-picture {
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 40px 0;
+  &__inner {
+    padding: 150px 0;
+    color: #fff;
+    h2, p {
+      color: #fff;
+    }
+    // ------------media-------------
+		@include w($md){
+			padding: 100px 30px;
+		}
+		// ------------media-------------
+		@include w($sm){
+			padding: 35px 10px;
+			padding-bottom: 50px;
+		}
+  }
+}

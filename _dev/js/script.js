@@ -123,8 +123,7 @@ $(document).ready(function () {
       e.index()
         ? e.prev().toggleClass("active")
         : e.next().toggleClass("active");
-  });
-
+  }),
   $(".counter__button").on("click", function () {
     var e = $(this).parent().find(".counter__value"),
       t = Number(e.val());
@@ -145,7 +144,7 @@ $(document).ready(function () {
           }),
         $(".cart-step-1-form").hide(),
         $(".cart-empty").fadeIn());
-  })
+  }),
 
 
   $("#add-to-cart").on("click", function () {
@@ -161,7 +160,14 @@ $(document).ready(function () {
         },
       },
     });
-  })
+  }),
+  $(".select-language").on("click", function () {
+    $.fancybox.open({
+      src: "#language-popup",
+      type: "inline",
+      opts: { touch: { vertical: !1 } },
+    });
+  }),
 
 
 $("#delivery-2").on("click", function(){
@@ -173,6 +179,11 @@ $("#delivery-1").on("click", function(){
   $(".nova-poshta-form").hide();
 });
   
+
+$(".btn-password-change").on("click", function(){
+  $(".password-change-group").slideToggle();
+}),
+
 
 
 
@@ -190,7 +201,19 @@ $("#delivery-1").on("click", function(){
   //       });
   // }  
 
+ 
 
+  // Execute a function when the user releases a key on the keyboard
+  document.getElementById("search-bar").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      console.log("sd ")
+      document.location.href = "http://www.site.ru";
+    }
+  });
 
   window.onresize = function(event) {
 
