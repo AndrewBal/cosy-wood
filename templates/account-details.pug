@@ -4,10 +4,10 @@ html(lang='ru')
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport' content='width=device-width')
-        link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel='stylesheet' href='css/main.css')
         title template
-body#catalog
+body 
     include header
     main#account-section
         .breadcrumbs
@@ -29,7 +29,7 @@ body#catalog
                     div(class="account-content personal-details-wrapper")
                         .account-title Personal details
                         .personal-details
-                            form.personal-details-form(novalidate="novalidate")
+                            form.personal-details-form(novalidate="novalidate" action="#" onsubmit="return false")
                                 .form-title Personal information
                                 div(class="form-group form-group--add_label required")
                                     label(for="first_name") First name
@@ -52,6 +52,26 @@ body#catalog
                                         label(for="repeat_password") Repeat
                                         input(class="form-control error" placeholder="Repeat password" id="repeat_password" name="repeat_password" required="required")
                                         label#repeat_password-error(class="error" for="repeat_password") This field is necessary
+                                .form-title Contacts
+                                div(class="form-group form-group--add_label required")
+                                    label(for="email") Email
+                                    input(class="form-control" placeholder="Email" id="email" value="matros@gmail.com" name="email" required="required")
+                                div(class="form-group form-group--add_label required")
+                                    label(for="phone") Phone
+                                    input(class="form-control" placeholder="Phone" id="phone" value="+44 20 1234-5678" name="phone" required="required")
+                                div(class="form-group form-group--add_label required")
+                                    label(for="country") Country
+                                    input(class="form-control" placeholder="Country" id="country" value="Great Britan" name="country" required="required")
+                                div(class="form-group form-group--add_label required")
+                                    label(for="town") Town
+                                    input(class="form-control" placeholder="Town" id="town" value="London" name="town" required="required")
+                                div(class="form-group form-group--add_label required")
+                                    label(for="address") Address
+                                    input(class="form-control" placeholder="Address" id="address" value="Trafalgar Square, 12" name="address" required="required")
+                                div(class="form-group form-group--add_label required")
+                                    label(for="postcode") Postcode/ZIP
+                                    input(class="form-control" placeholder="postcode" id="postcode" value="WC2N 5DN" name="postcode" required="required")
+                                button(class="btn-submit btn btn--fill") Save edits
 
 
     include footer
@@ -59,5 +79,5 @@ script(src="https://use.fontawesome.com/00ab51648d.js")
 script(src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous")
-script(src="https://unpkg.com/swiper/js/swiper.min.js")
+script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
 script(src="js/script.js")
